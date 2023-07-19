@@ -1,5 +1,5 @@
 IP: 158.160.66.162;
-name_taski: taski1983.ddns.net;
-name_kittygram: kittygram1983.ddns.net;
+name_taski: https://taski1983.ddns.net;
+name_kittygram: https://kittygram1983.ddns.net;
 login: yc-user;
 password: marina2011;
