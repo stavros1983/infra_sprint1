@@ -18,7 +18,6 @@ server {
         try_files $uri /index.html;
     }
 
-
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/taski1983.ddns.net/fullchain.pem; # managed by Certbot
     ssl_certificate_key /etc/letsencrypt/live/taski1983.ddns.net/privkey.pem; # managed by Certbot
@@ -26,17 +25,16 @@ server {
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
 }
+
+
 server {
     if ($host = taski1983.ddns.net) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
-
     listen 80;
     server_name 158.160.66.162 taski1983.ddns.net;
     return 404; # managed by Certbot
-
 
 }
 
@@ -64,8 +62,6 @@ server {
         try_files $uri /index.html;
     }
 
-
-
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/kittygram1983.ddns.net/fullchain.pem; # managed by Certbot
     ssl_certificate_key /etc/letsencrypt/live/kittygram1983.ddns.net/privkey.pem; # managed by Certbot
@@ -75,16 +71,13 @@ server {
 }
 
 
-
 server {
     if ($host = kittygram1983.ddns.net) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
     server_name 158.160.66.162 kittygram1983.ddns.net;
     listen 80;
     return 404; # managed by Certbot
-
 
 }
